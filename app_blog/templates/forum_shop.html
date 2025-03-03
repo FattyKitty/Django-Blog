@@ -1,0 +1,17 @@
+{% extends 'base/header.html' %}
+
+{% block content %}
+<h1>Here you can buy something from other user of forum</h1>
+{% if items %}
+    {% for item in items %}
+        <div>{{item.name}} costs {{item.price}}
+        <button>Buy</button>
+        </div><br>
+</body>
+    {% endfor %}
+{% else %}
+<h2>Sorry, no items are being sold today</h2>
+{% endif %}
+
+{% endblock %}
+</html>
